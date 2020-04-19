@@ -1,4 +1,28 @@
-Test
+# Twitter favorites per minute
+
+This is a quick and dirty script to poll the twitter API once a minute and persist the data into a mysql docker container. Run the below query to chuck out results.
+
+## Todo
+
+Not idempotent
+No tests or validation
+Lint & Prettier
+
+## Setup
+
+Requirements:
+docker
+nodejs
+twitter api keys
+
+Use .env.example to create your own .env
+
+```bash
+docker-compose up
+npx ts-node pollStats.ts [TweetID]
+```
+
+Run the SQL below to get likes
 
 ```sql
 SELECT
